@@ -13,7 +13,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            min-height: 100vh;
             background-color: #282828; /* Fundo escuro */
             margin: 0;
             color: #f0f0f0; /* Texto claro */
@@ -29,6 +29,7 @@
         }
         .slideshow-container {
             position: relative;
+            width: 100%;
             max-width: 500px;
             margin: auto;
             border: 2px solid #ff69b4; /* Rosa choque */
@@ -40,6 +41,7 @@
         .mySlides {
             display: none;
             width: 100%;
+            height: auto;
             border-radius: 10px;
             opacity: 0;
             transition: opacity 1s ease-in-out;
@@ -56,6 +58,7 @@
             padding: 10px;
             border-radius: 5px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            width: 90%; /* Para melhorar a responsividade */
         }
         .message {
             margin-top: 20px;
@@ -66,6 +69,13 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             font-family: 'Amatic SC', cursive; /* Fonte decorativa */
+            width: 90%; /* Para melhorar a responsividade */
+        }
+        @media (max-width: 600px) {
+            .counter, .message {
+                font-size: 1.2em;
+                padding: 15px;
+            }
         }
     </style>
 </head>
